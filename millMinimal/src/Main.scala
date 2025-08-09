@@ -1,6 +1,8 @@
-import scalafx.Includes._
+import javafx.scene.paint as jfxsp
+import scalafx.Includes.*
 import scalafx.application.JFXApp3
 import scalafx.application.JFXApp3.PrimaryStage
+import scalafx.beans.binding.ObjectBinding
 import scalafx.scene.Scene
 import scalafx.scene.paint.Color
 import scalafx.scene.shape.Rectangle
@@ -18,9 +20,6 @@ object Main extends JFXApp3:
           y = 40
           width = 100
           height = 100
-          // TODO Scala 3: variable `helper` was added to force type (and implicint conversions) on right side of `<==`
-          import javafx.scene.{paint => jfxsp}
-          import scalafx.beans.binding.ObjectBinding
+          // TODO Scala 3: variable `helper` was added to force type (and implicit conversions) on right side of `<==`
           val helper: ObjectBinding[jfxsp.Color] = when(hover) choose Color.Green otherwise Color.Red
           fill <== helper
-  
