@@ -10,7 +10,7 @@ object millMinimal extends ScalaModule:
 
   // Add dependency on JavaFX libraries
   val javaFXVersion = "24"
-  val scalaFXVersion = "24.0.2-R36"
+  val scalaFXVersion = "25.0.2-R37"
   val javaFXModules = List("base", "controls", "fxml", "graphics", "media", "swing", "web")
     .map(m => mvn"org.openjfx:javafx-$m:$javaFXVersion")
 
