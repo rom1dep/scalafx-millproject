@@ -16,7 +16,7 @@ object millMinimal extends ScalaModule:
 
   def mvnDeps = Seq(
     mvn"org.scalafx::scalafx:$scalaFXVersion",
-    mvn"org.controlsfx:controlsfx:11.2.2",
+    mvn"org.controlsfx:controlsfx:11.2.4",
     //...
   ) ++ javaFXModules
 
