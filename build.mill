@@ -4,12 +4,12 @@ package build
 import mill.*, scalalib.*
 
 object millMinimal extends ScalaModule:
-  def jvmId = "temurin:22.0.2" // JavaFX 24 requires JDK version >= 22
+  def jvmId = "temurin:22.0.2" // JavaFX 26.0.2 requires JDK version >= 22
 
   def scalaVersion = "3.7.2"
 
   // Add dependency on JavaFX libraries
-  val javaFXVersion = "24"
+  val javaFXVersion = "26.0.2"
   val scalaFXVersion = "24.0.2-R36"
   val javaFXModules = List("base", "controls", "fxml", "graphics", "media", "swing", "web")
     .map(m => mvn"org.openjfx:javafx-$m:$javaFXVersion")
